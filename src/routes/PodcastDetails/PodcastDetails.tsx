@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useGetPodcastDetails } from "../../queries/useGetPodcastDetails";
 import { useGetTopPodcasts } from "../../queries/useGetTopPodcasts";
 import { PodcastSummary } from "../../components/PodcastSummary";
@@ -53,7 +53,12 @@ export const PodcastDetails = () => {
 
                 return (
                   <tr key={index}>
-                    <td className="px-4 py-2">{episode.trackName}</td>
+                    <Link
+                      to={`/podcast/${podcastId}/episode/${episode.trackId}`}
+                      className="text-blue-500 hover:text-blue-800 visited:text-purple-600"
+                    >
+                      <td className="px-4 py-2">{episode.trackName}</td>
+                    </Link>
                     <td className="px-4 py-2">{formattedDate}</td>
                     <td className="px-4 py-2">
                       {new Date(episode.trackTimeMillis)
