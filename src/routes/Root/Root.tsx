@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useGetTopPodcasts } from "./Root.queries";
+import { useGetTopPodcasts } from "../../queries/useGetTopPodcasts";
 
 export const Root = () => {
   const { data, isLoading } = useGetTopPodcasts();
@@ -40,7 +40,7 @@ export const Root = () => {
             <Link
               to={`/podcast/${podcast.id.attributes["im:id"]}`}
               key={index}
-              className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center justify-center border-2 border-transparent hover:border-blue-500 hover:cursor-pointer"
+              className="rounded-lg shadow-md p-4 flex flex-col items-center justify-center border-2 border-transparent hover:border-blue-500 hover:cursor-pointer"
             >
               <img
                 className="h-32 w-32 object-cover rounded-full"

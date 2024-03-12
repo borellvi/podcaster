@@ -1,4 +1,4 @@
-export interface Feed {
+export interface UseGetTopPodcastsResponse {
   author: {
     name: {
       label: string;

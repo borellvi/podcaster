@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import { Feed } from "./Root.types";
+import { UseGetTopPodcastsResponse } from "./useGetTopPodcasts.types";
 
 export const useGetTopPodcasts = () => {
-  return useQuery<Feed>({
+  return useQuery<UseGetTopPodcastsResponse>({
     queryKey: ["topPodcasts"],
     queryFn: async () => {
       const response = await fetch(
