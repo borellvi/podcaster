@@ -20,7 +20,6 @@ export const EpisodeDetails = () => {
     (episode) => episode.trackId === Number(episodeId)
   );
 
-  console.log(episode);
   return (
     <ScreenWrapper isLoading={isTopPodcastsLoading || isPodcastDetailsLoading}>
       <div className="md:flex md:items-start md:space-x-6">
